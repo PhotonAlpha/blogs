@@ -1,88 +1,62 @@
-# **photon-repository-tasklist**
+# About me  
+    我是一个什么样的人？有时候我也会这样问我自己。 
+    
+    至少现在还是一名JAVA程序员，还在为了生计而奔波。 
 
-- [x] intergrate kafka with spring bus
+    曾经也迷茫过，也会问自己生活到底是为了什么？一个人独自在远离父母的城市生活，5年、10年之后我又该何去何从？
 
-- [x] spring cloud config password encrypt
-> keytool -genkeypair -alias config-server-key -keyalg RSA -keysize 4096 -sigalg SHA512withRSA -dname 'CN=Config Server,OU=Spring Cloud,O=Baeldung' -keypass my-k34-s3cr3t -keystore config-server.jks  -storepass my-s70r3-s3cr3t
-- [x] jasypt encrypt
+    可能是为了能让自己过上更好的生活，或者出于本能的对美好生活的向往，或者希望有一天能赚很多钱，不再使自己因为金钱而算计该不该省钱买，该不该去报名。或许人生就是这样，没有人会给答案，只有靠自己不断的思考，勇敢的往前走。
 
-- [x] docker-compose with nginx and springboot
-- [ ] nginx config
-- [ ] docker Swarm
+### 关于吧本站    
 
-- [ ] intergate mongoDB and redis
+    作为一名JAVA程序员，一直接触的工作是管理型网站。当然每个人都想有自己的个人门户网站，不但能在别人面前展示自我，还是记录自己的成长历程。
 
-- [ ] spring start gateway & cloud stream
+    但是出于经济原因，一直搁置。直到接触了GitHub，这个大型同性交友网站。于是搁置多年的计划又重新开始启动了。本站主要通过GitHub Pages搭建的，纯免费建站😏，或许以后会转义到自己的域名中。
+    
+    生活也基本被研究各种新技术占据了，受益于网站大佬的经验分享，虽不立志于成为大佬一样的人物，但也不想生活在毫无意义中度过。所以也打算开始写自己的博客网站。
 
-- [ ] use RPC backend service communicate
+# Contact
+### personal
+* Email: 411084090@qq.com q411084090@gmail.com
+* Website: 
+* 微信
+# Donate
+    如果我的文章帮助了你，可以赞赏我6.66元，请我吃个鸡腿🍗 😁
 
-- [ ] start learning netty
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
 
---------------------------
-Quartz JDBC job store: <https://examples.javacodegeeks.com/enterprise-java/quartz/java-quartz-configuration-example/>
-        Tables: https://github.com/quartznet/quartznet/tree/master/database
+```
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
 
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
 
+Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
+[^1]: This is the first footnote.
 
->Your link is working, but you're on separate networks inside of Docker. From the docker-compose.yml docs:
->
->Note: If you’re using the version 2 file format, the externally-created containers must be connected to at least one of the same networks as the service which is linking to them.
->
->To solve this, you can create your own network:
->
->docker network create dbnet
->docker network connect dbnet mysql
+[^bignote]: Here's one with multiple paragraphs and code.
 
+    Indent paragraphs to include them in the footnote.
 
+    `{ my code }`
 
-https://github.com/phpsb/book
-https://github.com/cjl3080434008/2014/tree/master/read_book
-https://github.com/EbookFoundation/free-programming-books/blob/master/free-programming-books-zh.md
-
-spring 3.x 异常处理方案：
-http://www.baeldung.com/exception-handling-for-rest-with-spring
-
-
-
-Jmeter
-https://github.com/qiuchunjoy/jmeter
-React js rumen
-https://github.com/brickspert/blog/issues/1
-https://github.com/xiaomuzhu/vue-ts-daily/tree/master/src TS Project
-plugin: https://juejin.im/entry/599d4cb96fb9a024a27bf090
-----nginx----
-* 静态web服务器 反向代理服务器
-* nginx -t 检测配置错误
-* nginx -s stop 
-* nginx -s reload 重新加载
-
-        http {
-            server_tokens off;//禁用版本号
-            upstream tomcats {/负载均衡策略
-                server 127.0.0.1:8080;
-                server 127.0.0.1:8080;
-                server 127.0.0.1:8080;
-            }
-            server {
-                listen       80; //端口
-                server_name  a.ttlsa.com; //DNS解析  C:\Windows\System32\drivers\etc\hosts
-                location / { //反向代理 也可以正向代理
-                        proxy_set_header X-Forwarded-Host $host;
-                        proxy_set_header X-Forwarded-Server $host;
-                        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                        proxy_pass http://tomcats;
-                }
-            }
-                //静态网页地址
-            server {
-                server_name b.ttlsa.com c.ttlsa.com;
-                listen 127.0.0.1:80;
-                root data/site/b.ttlsa.com;
-                access_log data/logs/nginx/b.ttlsa.com-access.log main;
-                location / {
-
-                }
-            }
-        }
+    Add as many paragraphs as you like.
