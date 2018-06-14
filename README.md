@@ -27,7 +27,7 @@
 
 他们的经验大概是不但能分享技术给大家，而且在写作过程中，不但能加深对新知识的理解，还能拓展一些之前没有发现的知识面。
 
-本站使用的是ReactJS & Ant Design & Redux & Axios & Webpack & ES6开发，借鉴 **[BAT大佬的文章](https://github.com/brickspert/blog/issues/1)**: *[前端小白半年准备，成功进入BAT](https://github.com/brickspert/blog/issues/16)*，托管于全球最大同性交友网站Github。（不是gay的意思!）
+本站使用的是ReactJS & Ant Design & Redux & Axios & Webpack & ES6开发，借鉴 **[BAT大佬的文章](https://github.com/brickspert/blog/issues/1)**: *[前端小白半年准备，成功进入BAT](https://github.com/brickspert/blog/issues/16)*。
 
 
 # Contact
