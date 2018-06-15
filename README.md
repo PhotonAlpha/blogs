@@ -54,5 +54,5 @@
 2. 使用github api实现博客数据提取
 3. 整合markdown，显示markdown格式数据在页面
 4. 引用了github-markdown css样式
-5. 自动生成markdown锚点，自动生成锚点组件
+5. 自动生成markdown锚点，自动生成锚点组件导航
 6. 使用react redux react-router4 router-history axios……
