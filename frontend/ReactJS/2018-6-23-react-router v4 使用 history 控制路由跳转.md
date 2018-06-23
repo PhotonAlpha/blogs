@@ -117,3 +117,6 @@ export function addProduct(props) {
 源码非常简单，没什么东西。我们完全自己写一个BrowserRouter组件，然后替换第三种解决方法中的Router组件。嘿嘿。
 
 讲到这里也结束了，我自己目前在使用第三种方法，虽然官方推荐第一种，我觉得用着比较麻烦唉。~
+
+-------
+## 建站需要 摘抄至 **[brickspert的文章](https://github.com/brickspert/blog/issues/3)** 。

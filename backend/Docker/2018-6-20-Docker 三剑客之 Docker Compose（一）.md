@@ -250,3 +250,6 @@ docker-compose stop
 ### 参考
 **[Get started with Docker Compose](https://docs.docker.com/compose/gettingstarted)**
 **[使用Docker-Compose编排容器}(https://www.hi-linux.com/posts/12554.html)**
+
+-------
+## 建站需要 摘抄至 **[纯洁的微笑](hhttp://www.ityouknow.com/docker/2018/03/22/docker-compose.html)**。
