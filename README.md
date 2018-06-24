@@ -43,4 +43,4 @@
 
 # Contact
 * Email: 411084090@qq.com q411084090@gmail.com
-* 微信：
+* 微信：![工作原理图](https://photonalpha.github.io/assets/321529767190.jpg)
