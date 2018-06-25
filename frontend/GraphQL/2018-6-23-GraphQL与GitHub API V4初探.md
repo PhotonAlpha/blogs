@@ -1,4 +1,7 @@
 # GraphQL API v4 手把手教我使用Github GraphQL 
+
+近几年提供 HTTP API 服务的公司越来越多，许多公司都把 API 作为产品重要的一部分，作为服务提供出去。而微服务的兴起，也让企业内部开始重视和频繁使用 HTTP API 。好的 HTTP API 设计容易理解、符合 RFC 标准、提供使用者便利的功能，其中经常被拿来作为教科书典范的当属 `Github API`。现在我们来学习一下Github新的API。
+
 [工具传送门](https://developer.github.com/v4/explorer/) `Ctrl+D` 比较顺手，可以触发提示，其实任意快捷键都可以。
 
 ## 什么是 [GraphQL](https://graphql.org/)？
