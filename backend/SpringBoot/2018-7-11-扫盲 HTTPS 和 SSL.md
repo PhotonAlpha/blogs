@@ -1,0 +1,1 @@
+https://program-think.blogspot.com/2014/11/https-ssl-tls-1.html
