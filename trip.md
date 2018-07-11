@@ -9,3 +9,7 @@
 -------------
 - 天坛（通票）、斋宫、祈年殿
 - 雍和宫、孔庙和国子监、簋街
+
+## Github Commit emoji-cheat-sheet
+https://www.webpagefx.com/tools/emoji-cheat-sheet/
+
