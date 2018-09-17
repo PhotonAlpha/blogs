@@ -12,7 +12,7 @@ recent file | ` command ⌘ + E `
 UpperCase LowerCase | ` shift⇧ + command ⌘ + X or Y `
 **compile** | `command ⌘ + B`
 **结束代码行** | `command ⌘ + shift⇧ + Entry`
-**小灯泡** | `command ⌘ + 1`
+**小灯泡 Show Intention Actions** | `command ⌘ + 1`
 翻译 | `control ⌃ + command ⌘ + U`
 recent file | ` command ⌘ + E `
 删除行 | `command(⌘)+ D`
