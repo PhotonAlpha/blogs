@@ -15,6 +15,7 @@ UpperCase LowerCase | ` shift⇧ + command ⌘ + U `
 **complete... 结束代码行** | `command ⌘ + shift⇧ + Entry`
 **小灯泡 Show Intention Actions** | `option ⌥ + ⏎`
 **实现类 Implementation(s)** | `option ⌥ + command ⌘ + B`
+**Generate** | `control ⌃ + N`
 翻译 | `control ⌃ + command ⌘ + U`
 recent file | ` command ⌘ + E `
 删除行 | `command(⌘)+ Y`
