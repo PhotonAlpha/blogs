@@ -35,3 +35,7 @@ main 方法 | ` psvm `
 def hello():
     return 'Hello World'
 ```
+## lombok settings
+1. Intellij Idea -> Preferences -> Compiler -> Annotation Processors
+
+2. File -> Other Settings -> Default Settings -> Compiler -> Annotation Processors
