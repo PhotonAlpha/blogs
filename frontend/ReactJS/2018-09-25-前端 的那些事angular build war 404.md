@@ -21,7 +21,7 @@
 这时候又出现了另一个问题,war放入Jboss中一直无法加载JS CSS 等文件,遇到了404问题.文件一直无法加载出来.
 ![404错误](https://photonalpha.github.io/assets/front_end_404.PNG)
 
-这个时候,脑回路打了死结,到底是什么情况,server-context去哪里了?`一直在refresh的问题那块在打转`,真想扇自己.
+这个时候,脑回路打了死结,到底是什么情况,server-context去哪里了?`一直在refresh的解决思路那块在打转`,真想扇自己.
 
 ## `曙光`
 在一次清晨,梳理了一下问题的症结所在之后,总了出了问题的思路.
