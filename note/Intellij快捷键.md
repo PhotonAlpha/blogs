@@ -18,6 +18,7 @@ UpperCase LowerCase | ` shift⇧ + command ⌘ + U ` | Ctrl + Shift + x y
 **Generate** | `control ⌃ + N` | Alt + Insert |
 **Surround With** |  | Alt + Shift + Z |
 **Parameter Info** |  | Ctrl + P |
+**同时选中所有匹配** | Ctrl+Shift+L | |
 翻译 | `control ⌃ + command ⌘ + U` 
 recent file | ` command ⌘ + E ` | Ctrl + E
 删除行 | `command(⌘)+ Y` | Ctrl + D
