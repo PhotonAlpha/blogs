@@ -14,8 +14,8 @@ recent file | ` command ⌘ + E `
 UpperCase LowerCase | ` shift⇧ + command ⌘ + U ` | Ctrl + Shift + x y
 **compile** | `command ⌘ + F9` | Ctrl + F9 or B
 **complete... 结束代码行** | `command ⌘ + shift⇧ + Entry`
-**Surround With** |  | Alt + Shift + Z |
-**Parameter Info** |  | Ctrl + P |
+**Surround With** | `option ⌥ + command ⌘ + T` | `Alt + Shift + Z` |
+**Parameter Info** | `option ⌥ + command ⌘ + shift⇧ + T` | `Ctrl + P` |
 **同时选中所有匹配 Refactor Rename** | Ctrl+Shift+L | Alt + Shift + R |
 **小灯泡 Show Intention Actions** | `option ⌥ + ⏎` | Alt + Enter|
 **实现类 Implementation(s)** | `option ⌥ + command ⌘ + B` | Ctrl + T
