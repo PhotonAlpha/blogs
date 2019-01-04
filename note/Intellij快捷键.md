@@ -41,3 +41,15 @@ def hello():
 1. Intellij Idea -> Preferences -> Compiler -> Annotation Processors
 
 2. File -> Other Settings -> Default Settings -> Compiler -> Annotation Processors
+
+
+```flow
+st=>start: Start
+op=>operation: Your Operation
+cond=>condition: Yes or No?
+e=>end
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
