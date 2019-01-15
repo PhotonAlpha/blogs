@@ -55,3 +55,4 @@ def hello():
 - SonarLint
 - Translation
 - VisualVM Launcher
+- Active Tab Highlighter
