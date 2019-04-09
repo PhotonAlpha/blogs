@@ -56,3 +56,33 @@ def hello():
 - Translation
 - VisualVM Launcher
 - Active Tab Highlighter
+
+
+### WIN7 ctrl + space 修改 
+You need to use regedit to do this.
+
+Step 1.
+Go to start and type "regedit" in the blank space ("search" under Win 7 or "run" under Win XP)
+
+Step 2:
+Go to HKEY_CURRENT_USER/Control Panel/Input Method/Hot Keys
+00000010 is for Ime/NonIme Toggle,
+00000011 is for Shape Toggle
+00000012 is for Punctuation 'Toggle
+
+Step 3:
+Go whichever hot key you want to modify, right click on the item and select modify,  here are the rules:
+Key Modifiers: 
+00 C0 00 00, no "control" or "shift" or "Alt"  (Set this value if you don't need the hot key)
+01 C0 00 00, "left Alt"
+02 C0 00 00, shift
+04 C0 00 00, control
+06 C0 00 00, control+shift
+Or combination of the above to make your own.
+
+Virtual Key:
+the actual key combination, ascii code
+20 00 00 00, for space
+21 00 00 00, for Page_Up
+00 00 00 00, for no key
+ff 00 00 00, for NONE!  (Set this value if you don't need the hot key)
