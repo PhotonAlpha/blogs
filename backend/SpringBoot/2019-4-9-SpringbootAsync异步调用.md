@@ -135,4 +135,19 @@ future.get(); //在等待执行结果时，程序会一直block，如果此时�
 该`CompletableFuture.allOf`静态方法允许等待所有的完成任务
 
 
+```java
+@Aspect
+@Component
+public class LogExecutionTimeAspect {
+    @Around("@annotation(LogExecutionTime)")
+    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+        final long start = System.currentTimeMillis();
+        final Object proceed = joinPoint.proceed();
+        final long executionTime = System.currentTimeMillis() - start;
+        log.info("Execution Time For {} is -->> {}  ms",joinPoint.getSignature(),executionTime);
+        return proceed;
+    }
+}
+```
+
 [更多参考](https://juejin.im/post/5ca47aa0e51d457131257269#heading-4)
