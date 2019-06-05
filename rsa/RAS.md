@@ -79,49 +79,43 @@ RestTemplate配置
 @Bean
 @ConditionalOnBean(value = ParamsConfig.class)
 public RestTemplate restTemplate(RestTemplateBuilder builder) {
-    // RestTemplate restTemplate = null;
-    // try {
+    // String trustStorePath = "";
+    // String storePath =  "";
+    // RestTemplate restTemplate = new RestTemplate();
+    // try (FileInputStream trustFileStream = new FileInputStream(trustStorePath);
+    //         FileInputStream serverFileStream = new FileInputStream(storePath)) {
+    //     String pwd = "pwd";
     //     KeyStore clientStore = KeyStore.getInstance(KeyStore.getDefaultType());
-    //     clientStore.load(new FileInputStream(""), "".toCharArray());
-    //
-    //     TrustStrategy acceptingTrustStrategy = (X509Certificate[] chain, String authType) -> true;
+    //     clientStore.load(trustFileStream, pwd.toCharArray());
+
+    //     String storePwd = "pwd";
+    //     KeyStore serverStore = KeyStore.getInstance(KeyStore.getDefaultType());
+    //     serverStore.load(serverFileStream, storePwd.toCharArray());
+    //     // set server and client auth
     //     SSLContext sslContext = org.apache.http.ssl.SSLContexts.custom()
-    //             // .loadTrustMaterial(clientStore, acceptingTrustStrategy)
-    //             .loadKeyMaterial(clientStore, "".toCharArray())
-    //             .loadTrustMaterial(null, new TrustSelfSignedStrategy())
+    //             .loadKeyMaterial(serverStore, storePwd.toCharArray())
+    //             .loadTrustMaterial(clientStore, new TrustSelfSignedStrategy())
     //             .build();
-    //
-    //     SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext, SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
-    //
-    //     Registry<ConnectionSocketFactory> registry = RegistryBuilder.<ConnectionSocketFactory>create()
-    //             .register("https", csf)
-    //             .register("http", new PlainConnectionSocketFactory())
-    //             .build();
-    //     BasicHttpClientConnectionManager connManager = new BasicHttpClientConnectionManager(registry);
-    //
+    //     // for validate the host
+    //     final HostnameVerifier verifier = (String s, SSLSession sslSession) -> {
+    //         log.info("SSL Verify host:{} <--> peerHost:{}", s , sslSession.getPeerHost());
+    //         return s.equals(sslSession.getPeerHost());
+    //     };
+    //     SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext, verifier);
+
     //     CloseableHttpClient httpClient = HttpClients.custom()
-    //             .setConnectionManager(connManager)
+    //             .setConnectionManager(poolingHttpClientConnectionManager(csf))
     //             .setSSLSocketFactory(csf)
-    //             .setSSLHostnameVerifier(NoopHostnameVerifier.INSTANCE)
+    //             .setSSLHostnameVerifier(verifier)
+    //             .setKeepAliveStrategy(connectionKeepAliveStrategy())
     //             .build();
     //     HttpComponentsClientHttpRequestFactory requestFactory =
     //             new HttpComponentsClientHttpRequestFactory();
     //     requestFactory.setHttpClient(httpClient);
-    //     restTemplate = new RestTemplate(requestFactory);
-    // } catch (KeyStoreException e) {
-    //     e.printStackTrace();
-    // } catch (NoSuchAlgorithmException e) {
-    //     e.printStackTrace();
-    // } catch (KeyManagementException e) {
-    //     e.printStackTrace();
-    // } catch (CertificateException e) {
-    //     e.printStackTrace();
-    // } catch (FileNotFoundException e) {
-    //     e.printStackTrace();
-    // } catch (IOException e) {
-    //     e.printStackTrace();
-    // } catch (UnrecoverableKeyException e) {
-    //     e.printStackTrace();
+
+    //     restTemplate.setRequestFactory(requestFactory);
+    // } catch (Exception e) {
+    //     log.error("init SSL restTemplate Failure", e);
     // }
     // return restTemplate;
     if(mscasslParamsConfig.isEnabled()) {
@@ -142,3 +136,6 @@ public RestTemplate restTemplate(RestTemplateBuilder builder) {
 
 [参考配置1](https://www.cnblogs.com/xdp-gacl/p/3750965.html)
 [参考配置2](https://hengstart.iteye.com/blog/840771)
+
+
+[rest Template & Http Client](https://howtodoinjava.com/spring-restful/resttemplate-httpclient-java-config/)
