@@ -336,7 +336,9 @@ public class HttpClientConfiguration extends SslClientComponentAbstract {
     }
 }
 ```
-6. 异常处理
+
+### 6. 异常处理
+
 但在实际过程中, `@ControllerAdvice`中，我们会发现通过request.getInputStream()方式获取的数据为空。
 
 > 根据Servlet规范，如果同时满足下列条件，则请求体(Entity)中的表单数据，将被填充到request的parameter集合中（request.getParameter系列方法可以读取相关数据）
