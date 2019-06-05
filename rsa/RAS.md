@@ -74,68 +74,8 @@ ___
 提交文件dukecertreq.csr给证书认证机构， 如VeriSign, 证书认证机构将会验证你的身份， 然后发送一个或者一串证书给你。
 
 ***
-RestTemplate配置
-```java
-@Bean
-@ConditionalOnBean(value = ParamsConfig.class)
-public RestTemplate restTemplate(RestTemplateBuilder builder) {
-    // String trustStorePath = "";
-    // String storePath =  "";
-    // RestTemplate restTemplate = new RestTemplate();
-    // try (FileInputStream trustFileStream = new FileInputStream(trustStorePath);
-    //         FileInputStream serverFileStream = new FileInputStream(storePath)) {
-    //     String pwd = "pwd";
-    //     KeyStore clientStore = KeyStore.getInstance(KeyStore.getDefaultType());
-    //     clientStore.load(trustFileStream, pwd.toCharArray());
-
-    //     String storePwd = "pwd";
-    //     KeyStore serverStore = KeyStore.getInstance(KeyStore.getDefaultType());
-    //     serverStore.load(serverFileStream, storePwd.toCharArray());
-    //     // set server and client auth
-    //     SSLContext sslContext = org.apache.http.ssl.SSLContexts.custom()
-    //             .loadKeyMaterial(serverStore, storePwd.toCharArray())
-    //             .loadTrustMaterial(clientStore, new TrustSelfSignedStrategy())
-    //             .build();
-    //     // for validate the host
-    //     final HostnameVerifier verifier = (String s, SSLSession sslSession) -> {
-    //         log.info("SSL Verify host:{} <--> peerHost:{}", s , sslSession.getPeerHost());
-    //         return s.equals(sslSession.getPeerHost());
-    //     };
-    //     SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext, verifier);
-
-    //     CloseableHttpClient httpClient = HttpClients.custom()
-    //             .setConnectionManager(poolingHttpClientConnectionManager(csf))
-    //             .setSSLSocketFactory(csf)
-    //             .setSSLHostnameVerifier(verifier)
-    //             .setKeepAliveStrategy(connectionKeepAliveStrategy())
-    //             .build();
-    //     HttpComponentsClientHttpRequestFactory requestFactory =
-    //             new HttpComponentsClientHttpRequestFactory();
-    //     requestFactory.setHttpClient(httpClient);
-
-    //     restTemplate.setRequestFactory(requestFactory);
-    // } catch (Exception e) {
-    //     log.error("init SSL restTemplate Failure", e);
-    // }
-    // return restTemplate;
-    if(mscasslParamsConfig.isEnabled()) {
-        System.setProperty(JAVAX_NET_SSL_TRUST_STORE, "");
-        System.setProperty(JAVAX_NET_SSL_TRUST_STORE_KEY, "");
-        System.setProperty(JAVAX_NET_SSL_KEY_STORE, "");
-        System.setProperty(JAVAX_NET_SSL_KEY_STORE_KEY, "");
-
-        javax.net.ssl.HttpsURLConnection.setDefaultHostnameVerifier(
-                (hostname, sslSession) -> true);
-    }
-    return builder.build();
-}
-```
-
 
 [ssl-certificate reference](https://dzone.com/articles/apache-http-clientclient-side-ssl-certificate)
 
 [参考配置1](https://www.cnblogs.com/xdp-gacl/p/3750965.html)
 [参考配置2](https://hengstart.iteye.com/blog/840771)
-
-
-[rest Template & Http Client](https://howtodoinjava.com/spring-restful/resttemplate-httpclient-java-config/)
