@@ -463,3 +463,37 @@ public FilterRegistrationBean inputStreamWrapperFilterRegistration() {
 然后注册该过滤器，设置优先级为1。Spring Boot 会按照order值的大小，从小到大的顺序来依次过滤。
 
 参考[SpringCloud Feign的分析](https://zhuanlan.zhihu.com/p/45495904)
+
+### 7. Hystrix circuit short-circuited and is OPEN Exception
+自己在做load test的时候， 采用feign去测试请求，结果报错，出现了短路，大概是下面这样的。（feign整合了hystrix并且自动打开了熔断器）。当并发数<=10的时候，则没有这种情况发生。
+
+    Hystrix circuit short-circuited and is OPEN
+    。。。。。
+
+引起这个问题的原因是在一个滚动窗口内，失败了二十个（默认），就会发生短路，短路时间默认为5秒，5秒之内拒绝所有的请求，之后开始运行。然后解决办法如下：
+
+设置熔断器失败的个数，默认为20个。
+
+`hystrix.command.default.circuitBreaker.requestVolumeThreshold=1000`
+
+没错，当我设置完成之后，没有出现短路的情况，但是出现了
+
+    hystrix could not be queued for execution and no fallback available.
+
+这是feign线程池的问题，因为feign默认的线程池大小为10个，我却没有配置。  
+[官方文档](https://github.com/Netflix/Hystrix/wiki/Configuration#coreSize)  
+[参考文档](http://www.itmuch.com/spring-cloud-sum/spring-cloud-concurrent/)
+
+去官方文档看了下，解决办法是配置feign的核心线程池的数量 或者 配置最大线程数量。
+
+
+`hystrix.threadpool.default.coreSize=100`  
+or  
+`hystrix.threadpool.default.maximumSize=100`
+`hystrix.threadpool.default.allowMaximumSizeToDivergeFromCoreSize=true`
+
+`hystrix.threadpool.default.maxQueueSize: -1`
+如该值为-1，那么使用的是SynchronousQueue，否则使用的是LinkedBlockingQueue。注意，修改MQ的类型需要重启。例如从-1修改为100，需要重启，因为使用的Queue类型发生了变化
+
+我这里选择配置了**最大线程队列数**
+
