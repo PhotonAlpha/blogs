@@ -22,6 +22,12 @@ UpperCase LowerCase | ` shift⇧ + command ⌘ + U ` | `Ctrl + Shift + U`
 **Generate** | `control ⌃ + N` | `Alt + Insert` |
 **Move Caret to Code Block End** || `Ctrl + ]` |
 **Move Caret to Code Block Start** || `Ctrl + [`|
+**Find Next / Move to Next Occurrence** |`control^ + L`||
+**Find Previous / Move to Previous Occurrence** |`control^ + shift⇧ + L`||
+**Select All Occurrences** |`control^ + command ⌘ + G`||
+**Add Selection for Next Occurrence** |`control^ + G`||
+**Unselect Occurrence** |`control⌃ + shift⇧ + G`||
+**Find in Path...** |`control⌃ + shift⇧ + F`||
 redo | `shift⇧ + command ⌘ + Z` | `Ctrl + Shift + Z`
 undo | `command ⌘ + Z` | `Ctrl + Z`
 move statement up down代码移动 | `shift⇧ + command ⌘ + ↑ or ↓` | `Ctrl + Shift + up or down`
@@ -57,6 +63,8 @@ def hello():
 - VisualVM Launcher
 - Active Tab Highlighter
 
+激活
+https://gitee.com/bluelovers/jetbrains-agent
 
 ### WIN7 ctrl + space 修改 
 You need to use regedit to do this.
