@@ -26,6 +26,12 @@ Add Rectangular Selection on Mouse Drag 鼠标多行选中 ||`Shift + Ctrl + Alt
 Add Selection for Next Occurrence 选中多行单词 ||`Alt + J`|
 Select All Occurrences 选中多行单词 ||`Shift + Ctrl + Alt + J`|
 Unselect Occurrence 去除选中单词 ||`Shift + Alt + J`|
+**Find Next / Move to Next Occurrence** |`control^ + L`||
+**Find Previous / Move to Previous Occurrence** |`control^ + shift⇧ + L`||
+**Select All Occurrences** |`control^ + command ⌘ + G`||
+**Add Selection for Next Occurrence** |`control^ + G`||
+**Unselect Occurrence** |`control⌃ + shift⇧ + G`||
+**Find in Path...** |`control⌃ + shift⇧ + F`||
 redo | `shift⇧ + command ⌘ + Z` | `Ctrl + Shift + Z`
 undo | `command ⌘ + Z` | `Ctrl + Z`
 move statement up down代码移动 | `shift⇧ + command ⌘ + ↑ or ↓` | `Ctrl + Shift + up or down`
@@ -61,6 +67,8 @@ def hello():
 - VisualVM Launcher
 - Active Tab Highlighter
 
+激活
+https://gitee.com/bluelovers/jetbrains-agent
 
 ### WIN7 ctrl + space 修改 
 You need to use regedit to do this.

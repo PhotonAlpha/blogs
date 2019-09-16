@@ -1,0 +1,14 @@
+SnKey:
+NAVA-JXLS-4KQX-SFUE
+
+Your name: ethan
+Yout organization: ethan
+Input Request Code (in Base64), empty line to return:
+c2ZiSkGmGDZbAhDp1nB41OjYEi0aKuVRU2IvCClrTBxn6XzMBPge7n5SR05ZjGAOUSC0hMhhG+Cj
+jAggUuufhw8LnsxRiazZ2qrLxVJatrFGgxl6ZClUGJRiOqnNKQ6PGd7ojuxCeNTshbCjGcrENNwi
+ERKIy5El5OHKryERvUUfcloY1RtD0znThiLpbtzKurtRBLtlCsO4JMJMOJ+jmEqpcID9QaHqkcY2
+4NNUHrQQ5EHmeOYG6YvnXo9EyKU8N0OnTRIbWFlWQQnTFTTrglbMvMeYhGZt4F8tP7ttEzGu2zGd
+Gh/mCS4gPO0OXX8qQnV+rhuyOToYo82Zi2vLBg==
+
+Activation Code:
+PRaaEQ0Y4+tCdsM09L5fS+cgq/GCUlPRUEUGtf+0LaGzn9q8vPtlacaJn2/vBPp4Z6mcH/2nvbgF/alRtrYnSTsgM8etLhOFKEjvtciRbG9uUMO0eN1r3oD6ayU/w2y41vYsUNUoiEdK8nBLZP5SHiO6wqEl8Ul5Iq/kIS+D0OHK1TBEq1ET+4kROKUT9ADGvUp/M4XhgJ2iIfeuvXQiGjDOlKzdZK7MvS7QP06F/pXkl/8kiZeuYdXdMIGE7xGWf35xSruxqPRDSRXiHu8kNNW+VlUgiJepJeb51QaOejU3+RB4v+Jsn82WpYA/mtCElcK7D9kgCte87CZVmhiZLg==
