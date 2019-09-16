@@ -22,6 +22,10 @@ UpperCase LowerCase | ` shift⇧ + command ⌘ + U ` | `Ctrl + Shift + U`
 **Generate** | `control ⌃ + N` | `Alt + Insert` |
 **Move Caret to Code Block End** || `Ctrl + ]` |
 **Move Caret to Code Block Start** || `Ctrl + [`|
+Add Rectangular Selection on Mouse Drag 鼠标多行选中 ||`Shift + Ctrl + Alt + button1`|
+Add Selection for Next Occurrence 选中多行单词 ||`Alt + J`|
+Select All Occurrences 选中多行单词 ||`Shift + Ctrl + Alt + J`|
+Unselect Occurrence 去除选中单词 ||`Shift + Alt + J`|
 redo | `shift⇧ + command ⌘ + Z` | `Ctrl + Shift + Z`
 undo | `command ⌘ + Z` | `Ctrl + Z`
 move statement up down代码移动 | `shift⇧ + command ⌘ + ↑ or ↓` | `Ctrl + Shift + up or down`
