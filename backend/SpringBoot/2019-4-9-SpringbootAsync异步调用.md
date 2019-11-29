@@ -52,6 +52,8 @@ public class SyncService {
 @EnableAsync
 @Slf4j
 public class ThreadPoolConfig implements AsyncConfigurer {
+    @Autowired
+    private BeanFactory beanFactory;
     /**
      * 配置线程池
      * @return
@@ -71,7 +73,8 @@ public class ThreadPoolConfig implements AsyncConfigurer {
         //等待时长
         taskExecutor.setAwaitTerminationSeconds(60);
         taskExecutor.initialize();
-        return taskExecutor;
+        //It is important to note here the use of LazyTraceExecutor. This class comes from the Sleuth library and is a special kind of executor that will propagate our traceIds to new threads and create new spanIds in the process.
+        return new LazyTraceExecutor(beanFactory, taskExecutor);
     }
 
     @Override
@@ -87,6 +90,8 @@ public class ThreadPoolConfig implements AsyncConfigurer {
     }
 }
 ```
+#### It is important to note here the use of `LazyTraceExecutor`. This class comes from the Sleuth library and is a special kind of executor that will propagate our traceIds to new threads and create new spanIds in the process.
+
 此时，使用的是就只需要在@Async加入线程池名称即可：
 ```java
 @Async("asyncPoolTaskExecutor")
