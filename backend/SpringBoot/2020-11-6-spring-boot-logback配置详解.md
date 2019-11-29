@@ -1,9 +1,9 @@
 1. create a customer class
 ```java
 public class AuditLogger {
-    public static final Logger LOGGER = Logger.getLogger(AuditQueryLogger.class);
+    public static final Logger LOGGER = Logger.getLogger(AuditLogger.class);
 
-    private AuditQueryLogger(){}
+    private AuditLogger(){}
 }
 
 ```
