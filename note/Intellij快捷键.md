@@ -23,14 +23,11 @@ UpperCase LowerCase | ` shift⇧ + command ⌘ + U ` | `Ctrl + Shift + U`
 **Move Caret to Code Block End** || `Ctrl + ]` |
 **Move Caret to Code Block Start** || `Ctrl + [`|
 Add Rectangular Selection on Mouse Drag 鼠标多行选中 ||`Shift + Ctrl + Alt + button1`|
-Add Selection for Next Occurrence 选中多行单词 ||`Alt + J`|
-Select All Occurrences 选中多行单词 ||`Shift + Ctrl + Alt + J`|
-Unselect Occurrence 去除选中单词 ||`Shift + Alt + J`|
 **Find Next / Move to Next Occurrence** |`control^ + L`||
 **Find Previous / Move to Previous Occurrence** |`control^ + shift⇧ + L`||
-**Select All Occurrences** |`control^ + command ⌘ + G`||
-**Add Selection for Next Occurrence** |`control^ + G`||
-**Unselect Occurrence** |`control⌃ + shift⇧ + G`||
+**Select All Occurrences** |`control^ + command ⌘ + G`|`Shift + Ctrl + Alt + J`|
+**Add Selection for Next Occurrence** |`control^ + G`|`Alt + J`|
+**Unselect Occurrence** |`control⌃ + shift⇧ + G`|`Shift + Alt + J`|
 **Find in Path...** |`control⌃ + shift⇧ + F`||
 redo | `shift⇧ + command ⌘ + Z` | `Ctrl + Shift + Z`
 undo | `command ⌘ + Z` | `Ctrl + Z`
@@ -66,6 +63,9 @@ def hello():
 - Translation
 - VisualVM Launcher
 - Active Tab Highlighter
+
+- codehelper.​generator
+- Free MyBatis plugin
 
 激活
 https://gitee.com/bluelovers/jetbrains-agent
