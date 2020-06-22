@@ -1,3 +1,8 @@
+https://notes.mengxin.science/2018/10/03/all-knowledge-about-certificate-1/
+
+https://github.com/downgoon/hello-world/wiki/keytoos-and-openssl
+
+
 # Keytool create Certificate Create
 ## keytool的概念
 keytool 是个密钥和证书管理工具。它使用户能够管理自己的公钥/私钥对及相关证书，用于（通过数字签名）自我认证（用户向别的用户/服务认证自己）或数据完整性以及认证服务。在JDK 1.4以后的版本中都包含了这一工具，它的位置为%JAVA_HOME%\bin\keytool.exe  
