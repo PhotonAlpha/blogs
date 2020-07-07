@@ -23,11 +23,9 @@ spring security oauth2 提供了四个常用注解，来辅助oauth2功能的实
 - `@EnableOAuth2Sso`：应用系统，使用远端认证授权服务，替换应用自身的用户登录鉴权security逻辑，实现单点登录功能。 简要步骤：访问应用系统资源-> 应用系统发现未登录-> 302 跳转到登录页面（登录页面地址已经与获取token逻辑自动关联）-> 应用系统发现符合获取token条件，根据授权类型拼装url->302 跳转到认证授权地址（认证授权服务提供）进行认证、授权。
 
 ## 三、Annotation加载过程：
-![知识结构总结](../imgs/OAuth2注解.jpg)
+一下是整个体系知识点以及源码的总结 
 
-# 终极指南
-http://www.iocoder.cn/Spring-Security/OAuth2-learning/
-
+![知识结构总结](https://raw.githubusercontent.com/PhotonAlpha/blogs/master/images/oauth/OAuth2注解.jpg)
 
 ---------------------------------------------------------
 
@@ -90,3 +88,7 @@ String finalSecret = "{bcrypt}"+new BCryptPasswordEncoder().encode("123456");
 
 使用 `PasswordEncoderFactories.createDelegatingPasswordEncoder()` 创建一个 `DelegatingPasswordEncoder`，这个委托者通过密码的前缀来 区分应该使用哪一种编码器去校验用户登录时的密码，**文档中推荐使用这种方式**，并且推荐使用 **`Bcrypt`** 而不是 md5,sha256 之类的算法，
 [具体原因看文档了解细节戳这里](https://docs.spring.io/spring-security/site/docs/5.0.4.RELEASE/reference/htmlsingle/)
+
+-------
+
+[**推荐一篇大佬的入门文章**](http://www.iocoder.cn/Spring-Security/OAuth2-learning/)
