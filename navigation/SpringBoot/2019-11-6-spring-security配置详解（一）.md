@@ -1,9 +1,4 @@
-
-
-
-spring security ref:
-	1. https://dzone.com/articles/spring-security-authentication
-	2. https://www.jianshu.com/p/ac42f38baf6e
+# spring security JWT 配置
 
 ### AuthenticationTokenFilter Strategy
 ```java
@@ -43,7 +38,7 @@ public class AuthenticationTokenFilter extends OncePerRequestFilter {
 }
 ```
 
-### MultiReadHttpServletRequest
+### MultiReadHttpServletRequest 实现httprequest多次读写
 ```java
 public class MultiReadHttpServletRequest extends HttpServletRequestWrapper {
     private ByteArrayOutputStream cachedBytes;
@@ -144,8 +139,12 @@ public class MultiReadHttpServletRequest extends HttpServletRequestWrapper {
         }
     }
 }
-```
 
+// usage
+MultiReadHttpServletRequest multiRequest = new MultiReadHttpServletRequest(httpServletRequest);
+filterChain.doFilter(multiRequest, httpServletResponse);
+```
+### customer trace id config
 ```java
 @Component
 @Order(TraceWebServletAutoConfiguration.TRACING_FILTER_ORDER + 1)
