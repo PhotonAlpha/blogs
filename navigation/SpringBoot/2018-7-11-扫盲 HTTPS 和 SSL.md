@@ -82,9 +82,9 @@ CA 证书，顾名思义，就是CA颁发的证书。
 ![root+certificate](https://raw.githubusercontent.com/PhotonAlpha/blogs/master/images/root_certificate_ca.png)
 
 证书信任链。图中的信任链有3层：
-- 第1层是根证书（Thawte Premium Server CA）
-- 第2层是 Thawte 专门用来签名的证书
-- 第3层是 Mozilla 自己的证书
+- 第1层是根证书（GlobalSign CA）
+- 第2层是 GlobalSign 专门用来签名的证书
+- 第3层是 bilibili 自己的证书
 
 　　目前大多数知名的公司（或组织机构），其发布的可执行文件（比如软件安装包、驱动程序、安全补丁），都带有数字签名。你可以自己去看一下。
 
