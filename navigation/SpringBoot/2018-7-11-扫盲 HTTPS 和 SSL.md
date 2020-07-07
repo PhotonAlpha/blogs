@@ -77,7 +77,7 @@ CA 证书，顾名思义，就是CA颁发的证书。
 
 处于最顶上的树根位置的那个证书，就是“根证书”。除了根证书，其它证书都要依靠上一级的证书，来证明自己。那谁来证明“根证书”可靠捏？实际上，根证书自己证明自己是可靠滴（或者换句话说，根证书是不需要被证明滴）。
 
-聪明的同学此刻应该意识到了：根证书是整个证书体系安全的根本。所以，如果某个证书体系中，根证书出了问题（不再可信了），那么所有被根证书所信任的其它证书，也就不再可信了。这个后果是相当相当滴严重（简直可以说是灾难性的），具体细节可以参考《CNNIC 证书的危害及各种清除方法》。
+聪明的同学此刻应该意识到了：根证书是整个证书体系安全的根本。所以，如果某个证书体系中，根证书出了问题（不再可信了），那么所有被根证书所信任的其它证书，也就不再可信了。这个后果是相当相当滴严重（简直可以说是灾难性的）。
 
 ![root+certificate](https://raw.githubusercontent.com/PhotonAlpha/blogs/master/images/root_certificate_ca.png)
 
@@ -99,6 +99,6 @@ CA 证书，顾名思义，就是CA颁发的证书。
 
 ![IE_warning](https://raw.githubusercontent.com/PhotonAlpha/blogs/master/images/IE_warning.png)
 
-![firefox_warning](https://raw.githubusercontent.com/PhotonAlpha/blogs/master/images/firefox_warning)
+![firefox_warning](https://raw.githubusercontent.com/PhotonAlpha/blogs/master/images/firefox_warning.png)
 
 大多数知名的网站，如果用了 HTTPS 协议，其证书都是可信的（也就不会出现上述警告）。所以，今后你如果上某个知名网站，发现浏览器跳出上述警告，你就要小心了！
