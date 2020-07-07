@@ -23,7 +23,7 @@ spring security oauth2 提供了四个常用注解，来辅助oauth2功能的实
 - `@EnableOAuth2Sso`：应用系统，使用远端认证授权服务，替换应用自身的用户登录鉴权security逻辑，实现单点登录功能。 简要步骤：访问应用系统资源-> 应用系统发现未登录-> 302 跳转到登录页面（登录页面地址已经与获取token逻辑自动关联）-> 应用系统发现符合获取token条件，根据授权类型拼装url->302 跳转到认证授权地址（认证授权服务提供）进行认证、授权。
 
 ## 三、Annotation加载过程：
-一下是整个体系知识点以及源码的总结 
+以下是整个体系知识点以及源码的总结 
 
 ![知识结构总结](https://raw.githubusercontent.com/PhotonAlpha/blogs/master/images/oauth/OAuth2注解.jpg)
 
