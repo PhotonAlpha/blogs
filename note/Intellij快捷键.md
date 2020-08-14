@@ -57,12 +57,15 @@ def hello():
 - FindBugs-IDEA
 - Free Mybatis plugin
 - GsonFormat
-- Lombok Plugin
-- Maven Helper
-- SonarLint
+- **Lombok Plugin**
+- **Maven Helper**
+- **SonarLint**
 - Translation
 - VisualVM Launcher
-- Active Tab Highlighter
+- **Active Tab Highlighter(#0B88AD)**
+- **Mapstruct Support**
+- **RestfulToolkit**
+- **Leecode**
 
 - codehelper.​generator
 - Free MyBatis plugin
