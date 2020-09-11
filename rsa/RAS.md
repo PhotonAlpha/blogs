@@ -84,3 +84,32 @@ ___
 
 [参考配置1](https://www.cnblogs.com/xdp-gacl/p/3750965.html)
 [参考配置2](https://hengstart.iteye.com/blog/840771)
+
+
+
+
+# 双向认证与单向认证
+## 单向认证开启（客户端校验服务端证书即可）
+server.port=7090
+server.address=127.0.0.1
+server.ssl.key-store=classpath:sslServer.p12
+server.ssl.key-store-password=123456
+server.ssl.key-alias=sslServer
+server.ssl.keyStoreType=JKS
+
+
+## 开启双向认证（客户端与服务端互相校验）
+server.port=7090
+server.address=127.0.0.1
+server.ssl.key-store=classpath:sslServer.p12
+server.ssl.key-store-password=123456
+server.ssl.key-alias=sslServer
+server.ssl.keyStoreType=JKS
+
+server.ssl.trust-store-password=123456
+server.ssl.client-auth=need
+server.ssl.trust-store-type=JKS
+server.ssl.trust-store-provider=SUN
+
+
+
