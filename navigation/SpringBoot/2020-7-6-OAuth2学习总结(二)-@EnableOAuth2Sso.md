@@ -20,4 +20,4 @@ check_token: http://localhost:8081/authserver/oauth/check_token?token=09721a67-a
 
 EnableOAuth2SSo和EnableOAuth2Client的区别是EnableOAuth2SSo会在过滤器链中添加OAuth2ClientAuthenticationProcessingFilter
 
-接口服务器使用@EnableOAuth2Client,UI 服务器使用EnableOAuth2SSo
+只是调用三方接口@EnableOAuth2Client, 前后端服务用@EnableOAuth2SSo
