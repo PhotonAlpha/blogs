@@ -61,7 +61,7 @@ def hello():
 - **Maven Helper**
 - **SonarLint**
 - Translation
-- VisualVM Launcher
+- **VisualVM Launcher**
 - **Active Tab Highlighter(#0B88AD)**
 - **Mapstruct Support**
 - **RestfulToolkit**
