@@ -18,6 +18,7 @@ UpperCase LowerCase | ` shift⇧ + command ⌘ + U ` | `Ctrl + Shift + U`
 **Parameter Info** | `option ⌥ + command ⌘ + shift⇧ + T` | `Ctrl + P` |
 **同时选中所有匹配 Refactor Rename** | `Ctrl+Shift+L` | `Ctrl + Alt + Shift + T` |
 **小灯泡 Show Intention Actions** | `option ⌥ + ⏎` | `Alt + Enter`|
+**自动应用变量 Introduce Variable** | `` | `Ctrl + Alt + V`|
 **实现类 Implementation(s)** | `option ⌥ + command ⌘ + B` | `Ctrl + Alt + B`
 **Generate** | `control ⌃ + N` | `Alt + Insert` |
 **Move Caret to Code Block End** || `Ctrl + ]` |
@@ -69,6 +70,9 @@ def hello():
 
 - codehelper.​generator
 - Free MyBatis plugin
+
+idea gradle 在控制台输出中文乱码解决方式
+help->Edit Custom VM Options 追加 `-Dfile.encoding=UTF-8`
 
 激活
 https://gitee.com/bluelovers/jetbrains-agent

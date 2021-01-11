@@ -141,9 +141,19 @@ mysql> show slave status\G;
 
 
 
+=================================
+分库分表
 
-DB1：
-docker run -d -uroot -e MYSQL_ROOT_PASSWORD=admin --name mysql-node1 --net mynetwork --ip 172.18.0.12 -v ${PWD}/node1/data:/var/lib/mysql -v ${PWD}/node1/log/mysql:/var/log/mysql -p 3306:3306 mysql
 
-DB2：
-docker run -d -uroot -e MYSQL_ROOT_PASSWORD=admin --name mysql-node1 --net mynetwork --ip 172.18.0.13 -v ${PWD}/node1/data:/var/lib/mysql -v ${PWD}/node1/log/mysql:/var/log/mysql -p 3307:3306 mysql
+shardingDS1：
+docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS1 --net mynetwork --ip 172.18.1.11 -v ${PWD}/shardingDS1/my.cnf:/etc/mysql/my.cnf -v ${PWD}/shardingDS1/data:/var/lib/mysql -v ${PWD}/shardingDS1/log/mysql:/var/log/mysql -p 3306:3306 --restart always -d mysql
+
+shardingDS2：
+docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS2 --net mynetwork --ip 172.18.1.12 -v ${PWD}/shardingDS2/my.cnf:/etc/mysql/my.cnf -v ${PWD}/shardingDS2/data:/var/lib/mysql -v ${PWD}/shardingDS2/log/mysql:/var/log/mysql -p 3307:3306 -d mysql
+
+shardingDS3：
+docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS3 --net mynetwork --ip 172.18.1.13 -v ${PWD}/shardingDS3/my.cnf:/etc/mysql/my.cnf -v ${PWD}/shardingDS3/data:/var/lib/mysql -v ${PWD}/shardingDS3/log/mysql:/var/log/mysql -p 3308:3306 -d mysql
+
+
+---------
+docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS3 --net mynetwork --ip 172.18.1.13 -v ${PWD}/shardingDS3/my.cnf:/etc/mysql/my.cnf -v ${PWD}/shardingDS3/data:/var/lib/mysql -v ${PWD}/shardingDS3/log/mysql:/var/log/mysql -p 3306:3306 --restart always -d mysql:5.7.32
