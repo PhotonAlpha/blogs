@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  eureka-7001:
+    container_name: 'eureka-7001'
+    image: 'docker-eureka-server:1.0.0'
+    # build: 
+    #   # docker file 路径
+    #   context: .
+    #   # 指定Dockerfile 文件名
+    #   dockerfile: Dockerfile
+
+    # 暴露端口，但不映射到宿主机，只被连接的服务访问。
+    # 仅可以指定内部端口为参数：
+    # expose:
+    #   - "8080"
+    ports:
+      - 7001:7001
+    volumes:
+      - .:/logs
+    environment: 
+      - SPRING_PROFILES_ACTIVE=eureka1
+    restart: always
+  eureka-7002:
+    container_name: 'eureka-7002'
+    image: 'docker-eureka-server:1.0.0'
+    ports:
+      - 7002:7002
+    volumes:
+      - .:/logs
+    environment: 
+      - SPRING_PROFILES_ACTIVE=eureka2
+    restart: always
+
+# docker run --name eureka-7001 -p 7001:7001 -v ${PWD}:/logs/ -e "SPRING_PROFILES_ACTIVE=eureka1" -d docker-eureka-server:1.0.0
