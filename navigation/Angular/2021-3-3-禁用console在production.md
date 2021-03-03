@@ -158,7 +158,7 @@ ng build --base-href=/xxx/xx/ --configuration=uat
 4. Click the `TypeScript` enable At the VS Code bottom right.
 
 # 自定义angular upload上传组件
-./note/angular-自定义upload组件.7z
+./note/angular8-自定义upload组件.7z 123
 
 ```html
 <cq-upload class="upload-demo"
