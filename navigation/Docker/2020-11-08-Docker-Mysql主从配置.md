@@ -156,4 +156,7 @@ docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS3 --net mynetwor
 
 
 ---------
-docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS3 --net mynetwork --ip 172.18.1.13 -v ${PWD}/shardingDS3/my.cnf:/etc/mysql/my.cnf -v ${PWD}/shardingDS3/data:/var/lib/mysql -v ${PWD}/shardingDS3/log/mysql:/var/log/mysql -p 3306:3306 --restart always -d mysql:5.7.32
+docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS1 -p 3306:3306 --restart always -d mysql
+
+
+docker run -uroot -e MYSQL_ROOT_PASSWORD=admin --name shardingDS1 -v ${PWD}/shardingDS1/my.cnf:/etc/mysql/my.cnf -v ${PWD}/shardingDS1/data:/var/lib/mysql -v ${PWD}/shardingDS1/log/mysql:/var/log/mysql -p 3306:3306 --restart always -d mysql:5.7.32

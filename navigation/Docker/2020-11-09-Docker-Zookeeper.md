@@ -56,3 +56,7 @@ standaloneEnabled=true
 admin.enableServer=true
 server.1=localhost:2888:3888;2181
 ```
+
+
+
+docker run -d --name zookeeper-1 -v ${PWD}/zkMater/conf:/etc/mysql/my.cnf -v ${PWD}/masterCnf/data:/var/lib/mysql -v ${PWD}/masterCnf/log/mysql:/var/log/mysql -p 3306:3306 zookeeper
