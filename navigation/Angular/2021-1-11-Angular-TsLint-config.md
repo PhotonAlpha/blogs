@@ -14,3 +14,33 @@
   }
 
   ```
+
+# angular-cli server - how to proxy API requests to another server?
+ 
+##  UPDATE 2017
+Better documentation is now available and you can use both JSON and JavaScript based configurations: ![angular-cli documentation proxy](https://github.com/angular/angular-cli/pull/1896?fireglass_rsn=true)
+sample https proxy configuration
+{
+  "/angular": {
+     "target":  {
+       "host": "github.com",
+       "protocol": "https:",
+       "port": 443
+     },
+     "secure": false,
+     "changeOrigin": true,
+     "logLevel": "info"
+  }
+}
+To my knowledge with Angular 2.0 release setting up proxies using .ember-cli file is not recommended. official way is like below
+edit "start" of your package.json to look below
+"start": "ng serve --proxy-config proxy.conf.json",
+create a new file called proxy.conf.json in the root of the project and inside of that define your proxies like below
+{
+  "/api": {
+    "target": "http://api.yourdomai.com",
+    "secure": false
+  }
+}
+Important thing is that you use npm start instead of ng serve
+Read more from here : Proxy Setup Angular 2 cli
