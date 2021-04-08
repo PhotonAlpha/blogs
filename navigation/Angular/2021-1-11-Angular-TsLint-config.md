@@ -17,8 +17,8 @@
 
 # angular-cli server - how to proxy API requests to another server?
  
-##  UPDATE 2017
-> Better documentation is now available and you can use both JSON and JavaScript based configurations: ![angular-cli documentation proxy](https://github.com/angular/angular-cli/pull/1896?fireglass_rsn=true)
+##  [UPDATE 2017](https://stackoverflow.com/questions/37172928/angular-cli-server-how-to-proxy-api-requests-to-another-server)
+> Better documentation is now available and you can use both JSON and JavaScript based configurations: [angular-cli documentation proxy](https://github.com/angular/angular-cli/pull/1896?fireglass_rsn=true)
 > sample https proxy configuration
 ```
 {
