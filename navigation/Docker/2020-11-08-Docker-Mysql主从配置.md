@@ -1,3 +1,67 @@
+# Mysql单机安装
+1. 创建my.cnf
+```
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+#
+# The MySQL  Server configuration file.
+#
+# For explanations see
+# http://dev.mysql.com/doc/mysql/en/server-system-variables.html
+
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+secure-file-priv= NULL
+init_connect='SET collation_connection = utf8_unicode_ci'
+init_connect='SET NAMES utf8'
+character-set-server=utf8
+collation-server=utf8_unicode_ci
+skip-character-set-client-handshake
+skip-name-resolve
+
+# Custom config should go here
+[client]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+
+!includedir /etc/mysql/conf.d/
+```
+2. docker run \
+--privileged=true \
+-p 3306:3306 --name mysql \
+-v /opt/mydata/mysql/log:/var/log/mysql \
+-v /opt/mydata/mysql/data:/var/lib/mysql \
+-v /opt/mydata/mysql/my.cnf:/etc/mysql/my.cnf \
+-v /opt/mydata/mysql/conf.d:/etc/mysql/conf.d \
+-e MYSQL_ROOT_PASSWORD=root \
+--restart=always \
+-d mysql:8.0
+
+3. docker exec -it mysql bin/bash
+
+4. mysql -uroot -p
+5. use mysql;
+6. ALTER user 'root'@'localhost' IDENTIFIED BY 'root'
+7. update user set host = '%' where user ='root';
+8. flush privileges;
+9. quit;
+
 # MySQL 主从配置
 简单命令： docker run -d -uroot -e MYSQL_ROOT_PASSWORD=admin --name my-mysql -p 3306:3306 mysql 
 # 1. mysql 配置准备
